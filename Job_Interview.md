@@ -223,11 +223,86 @@ classDiagram
         + getTimestamp(): Date
     }
 
-    User -- Group
-    CurrentUser -- User
-    ChatMenu -- CurrentUser
-    MainMenu -- CurrentUser
-    ChatMessage -- User
+    User "1" -- "*" Group : contains
+    CurrentUser "1" -- "1" User : has
+    MainMenu "1" -- "1" CurrentUser : has
+    ChatMenu "1" -- "1" CurrentUser : has
+    ChatMessage "1" -- "1" User : sent by
+
+    class User {
+        .. Display Contact List ..
+        displayContactList() {
+            // Implementasi
+        }
+        .. Display Received Chat ..
+        displayReceivedChat() {
+            // Implementasi
+        }
+    }
+
+    class Group {
+        .. Add Member ..
+        addMember(user: User) {
+            // Implementasi
+        }
+        .. Get Members ..
+        getMembers() {
+            // Implementasi
+        }
+    }
+
+    class CurrentUser {
+        .. Get Current User ..
+        getCurrentUser() {
+            // Implementasi
+        }
+        .. Set Current User ..
+        setCurrentUser(user: User) {
+            // Implementasi
+        }
+    }
+
+    class MainMenu {
+        .. Show Main Menu ..
+        showMainMenu() {
+            // Implementasi
+        }
+        .. Process Choice ..
+        processChoice(choice: short) {
+            // Implementasi
+        }
+    }
+
+    class ChatMenu {
+        .. Show Chat Menu ..
+        showChatMenu() {
+            // Implementasi
+        }
+        .. Process Choice ..
+        processChoice(choice: short) {
+            // Implementasi
+        }
+    }
+
+    class ChatMessage {
+        .. Get Sender ..
+        getSender() {
+            // Implementasi
+        }
+        .. Get Receiver ..
+        getReceiver() {
+            // Implementasi
+        }
+        .. Get Message ..
+        getMessage() {
+            // Implementasi
+        }
+        .. Get Timestamp ..
+        getTimestamp() {
+            // Implementasi
+        }
+    }
+
 ```
 
 # 9
