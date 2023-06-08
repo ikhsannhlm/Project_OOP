@@ -1,4 +1,4 @@
-#1
+# 1
 Dalam masalah ini, kita memiliki beberapa langkah yang harus dilakukan:
 
 1. Meminta input username dari pengguna untuk personal chat.
@@ -64,7 +64,7 @@ case 1:
 
 Dalam implementasi di atas, kita menggunakan perulangan `for` untuk mencari user yang sesuai berdasarkan username yang dimasukkan oleh pengguna. Jika ditemukan, pesan personal dibuat dengan menggunakan objek `PersonalMessage` yang berisi pengguna yang sedang aktif (`currentUser`) dan isi pesan yang dimasukkan oleh pengguna. Pesan tersebut kemudian dikirim ke user yang sesuai melalui metode `receiveMessage`. Jika username tidak ditemukan, pesan "Username not found" akan ditampilkan.
 
-#2
+# 2
 Berikut adalah penjelasan algoritma dari solusi yang dibuat:
 
 1. Pertama, kita meminta pengguna untuk memasukkan username untuk personal chat.
@@ -80,7 +80,7 @@ Berikut adalah penjelasan algoritma dari solusi yang dibuat:
 
 Algoritma tersebut memastikan bahwa pesan personal dikirim hanya kepada user yang sesuai berdasarkan username yang dimasukkan oleh pengguna. Jika username tidak ditemukan, pesan "Username not found" akan ditampilkan agar pengguna mendapatkan umpan balik yang sesuai.
 
-#3
+# 3
 Konsep dasar OOP (Object-Oriented Programming) adalah pendekatan dalam pemrograman yang berfokus pada objek sebagai unit dasar yang memiliki atribut dan perilaku tertentu. OOP menyediakan seperangkat konsep dan prinsip yang memungkinkan pengorganisasian, pemodelan, dan pengembangan perangkat lunak yang lebih efisien dan terstruktur.
 
 Berikut adalah konsep dasar OOP:
@@ -99,7 +99,7 @@ Berikut adalah konsep dasar OOP:
 
 Konsep dasar OOP ini membantu dalam pengembangan perangkat lunak yang modular, terstruktur, dan mudah dimengerti. OOP juga mempromosikan pemisahan tanggung jawab (responsibility) dan modularitas yang memungkinkan pengembangan yang lebih efisien, pemeliharaan yang lebih mudah, dan peningkatan kemampuan untuk mengelola kompleksitas dalam perangkat lunak.
 
-#4
+# 4
 Dalam program yang telah dibuat, kita dapat menggambarkan penggunaan konsep enkapsulasi dengan menerapkan aksesibilitas yang tepat pada atribut dan metode dalam kelas-kelas yang terlibat. Berikut adalah contoh penggunaan enkapsulasi dalam program tersebut:
 
 1. Kelas User:
@@ -116,7 +116,7 @@ Dengan menerapkan aksesibilitas yang tepat pada atribut dan metode, kita memasti
 
 Contoh penggunaan enkapsulasi dalam program tersebut dapat dilihat pada implementasi metode-metode seperti `getUsername()`, `getNumber()`, `addContact()`, dan `displayContactList()`. Atribut-atribut yang dienkapsulasi hanya dapat diakses melalui metode-metode ini, sedangkan detail implementasi dan representasi internal atribut disembunyikan dari kelas-kelas lain yang menggunakan kelas User dan CurrentUser.
 
-#5
+# 5
 Dalam program yang telah dibuat, kita dapat menggambarkan penggunaan konsep abstraksi dengan memanfaatkan kelas abstrak dan metode abstrak. Berikut adalah contoh penggunaan abstraksi dalam program tersebut:
 
 1. Kelas User:
@@ -131,7 +131,7 @@ Dengan menerapkan konsep abstraksi, kita membuat kerangka umum (kelas User) yang
 
 Contoh penggunaan abstraksi dalam program tersebut dapat dilihat dari penggunaan kelas abstrak User dan implementasi konkret metode `displayContactList()` dalam kelas CurrentUser. Melalui abstraksi, kita fokus pada konsep pengguna dan interaksi dengan daftar kontak, tanpa terlalu memperhatikan detail implementasi yang spesifik pada tingkat yang lebih rendah.
 
-#6
+# 6
 Dalam program yang telah dibuat, kita dapat menggambarkan penggunaan konsep inheritance dan polymorphism sebagai berikut:
 
 1. Inheritance (Pewarisan):
@@ -147,7 +147,7 @@ Contoh penggunaan inheritance dan polymorphism dalam program tersebut dapat dili
 
 Penggunaan konsep inheritance memungkinkan kita untuk memanfaatkan kembali kode yang sudah ada, sementara polimorfisme memungkinkan kita untuk menggunakan objek dengan cara yang tepat untuk setiap kelas dalam hierarki pewarisan.
 
-#7
+# 7
 Berikut adalah contoh tabel use case dalam format file .md:
 
 | Use Case ID | Nama Use Case      | Deskripsi                                   | Point | Status |
@@ -165,7 +165,7 @@ Berikut adalah contoh tabel use case dalam format file .md:
 | UC-011      | Cari Sesuatu      | Pengguna dapat melakukan pencarian pada chat dan kontak. | 6 | Uncomplete |
 | UC-012      | Kembali ke Menu Utama | Pengguna dapat kembali ke menu utama aplikasi. | 8 | Uncomplete |
 
-#8
+# 8
 '''mermaid
 classDiagram
     class User {
@@ -231,8 +231,8 @@ classDiagram
 
 '''
 
-#9
+# 9
 Link Yt menyusul
 
-#10
+# 10
 Menyusul
