@@ -166,7 +166,7 @@ Berikut adalah contoh tabel use case dalam format file .md:
 | UC-012      | Kembali ke Menu Utama | Pengguna dapat kembali ke menu utama aplikasi. | 8 | Uncomplete |
 
 # 8
-'''mermaid
+```mermaid
 classDiagram
     class User {
         - username: String
@@ -228,8 +228,7 @@ classDiagram
     ChatMenu -- CurrentUser
     MainMenu -- CurrentUser
     ChatMessage -- User
-
-'''
+```
 
 # 9
 Link Yt menyusul
