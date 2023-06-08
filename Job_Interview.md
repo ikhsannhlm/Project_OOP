@@ -167,66 +167,67 @@ Berikut adalah contoh tabel use case dalam format file .md:
 
 # 8
 ```mermaid
-User <|-- Group
-CurrentUser "1" -- "1" User
-MainMenu "1" -- "1" CurrentUser
-ChatMenu "1" -- "1" CurrentUser
-ChatMessage "1" -- "1" User
+classDiagram
+    class User {
+        - username: String
+        - phoneNumber: String
+        + User(username: String, phoneNumber: String)
+        + getUsername(): String
+        + getPhoneNumber(): String
+        + addContact(user: User): void
+        + getContactByUsername(username: String): User
+        + displayContactList(): void
+        + displayReceivedChat(): void
+    }
 
-class User {
-  - username: String
-  - phoneNumber: String
-  + User(username: String, phoneNumber: String)
-  + getUsername(): String
-  + getPhoneNumber(): String
-  + addContact(user: User): void
-  + getContactByUsername(username: String): User
-  + displayContactList(): void
-  + displayReceivedChat(): void
-}
+    class Group {
+        - groupName: String
+        - members: List<User>
+        + Group(groupName: String)
+        + getGroupName(): String
+        + addMember(user: User): void
+        + getMembers(): List<User>
+    }
 
-class Group {
-  - groupName: String
-  - members: List<User>
-  + Group(groupName: String)
-  + getGroupName(): String
-  + addMember(user: User): void
-  + getMembers(): List<User>
-}
+    class CurrentUser {
+        - currentUser: User
+        + getCurrentUser(): User
+        + setCurrentUser(user: User): void
+    }
 
-class CurrentUser {
-  - currentUser: User
-  + getCurrentUser(): User
-  + setCurrentUser(user: User): void
-}
+    class MainMenu {
+        - currentUser: CurrentUser
+        - userList: List<User>
+        + MainMenu(userList: List<User>)
+        + showMainMenu(): void
+        + processChoice(choice: short): void
+    }
 
-class MainMenu {
-  - currentUser: CurrentUser
-  - userList: List<User>
-  + MainMenu(userList: List<User>)
-  + showMainMenu(): void
-  + processChoice(choice: short): void
-}
+    class ChatMenu {
+        - currentUser: CurrentUser
+        - userList: List<User>
+        + ChatMenu(currentUser: CurrentUser, userList: List<User>)
+        + showChatMenu(): void
+        + processChoice(choice: short): void
+    }
 
-class ChatMenu {
-  - currentUser: CurrentUser
-  - userList: List<User>
-  + ChatMenu(currentUser: CurrentUser, userList: List<User>)
-  + showChatMenu(): void
-  + processChoice(choice: short): void
-}
+    class ChatMessage {
+        - sender: User
+        - receiver: User
+        - message: String
+        - timestamp: Date
+        + ChatMessage(sender: User, receiver: User, message: String)
+        + getSender(): User
+        + getReceiver(): User
+        + getMessage(): String
+        + getTimestamp(): Date
+    }
 
-class ChatMessage {
-  - sender: User
-  - receiver: User
-  - message: String
-  - timestamp: Date
-  + ChatMessage(sender: User, receiver: User, message: String)
-  + getSender(): User
-  + getReceiver(): User
-  + getMessage(): String
-  + getTimestamp(): Date
-}
+    User -- Group
+    CurrentUser -- User
+    ChatMenu -- CurrentUser
+    MainMenu -- CurrentUser
+    ChatMessage -- User
 ```
 
 # 9
