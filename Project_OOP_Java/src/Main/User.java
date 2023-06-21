@@ -34,9 +34,13 @@ public class User {
 
     // Menampilkan Daftar list Kontak
     public void displayContactList() {
-        System.out.println("Contact " + username + ": ");
-        for (User contact : contactList) {
-            System.out.println(contact.getUsername() + " (" + contact.getNumber() + ")");
+        System.out.println("Contact " + getUsername() + ": ");
+        if (contactList.isEmpty()) {
+            System.out.println("There's no contacts");
+        } else {
+            for (User contact : contactList) {
+                System.out.println(contact.getUsername() + " (" + contact.getNumber() + ")");
+            }
         }
         System.out.println();
     }
@@ -92,7 +96,7 @@ public class User {
         System.out.println();
     }
     
-        // Override kelas object agar menghasilkan info yang dibutuhkan method DisplayChatList diatas
+    // Override kelas object agar menghasilkan info yang dibutuhkan method DisplayChatList diatas
     public String toString() {
         return username;
     }
@@ -106,6 +110,8 @@ public class User {
         }
         return null;
     }
+
+
     
 }
 

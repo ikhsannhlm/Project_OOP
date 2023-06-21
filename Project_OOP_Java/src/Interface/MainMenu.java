@@ -1,6 +1,6 @@
 package Interface;
-import Main.User;
 
+import Main.User;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,22 +29,27 @@ public class MainMenu {
 
             switch (option) {
                 case 1:
-                    ChatMenu chatMenu = new ChatMenu(currentUser, userList);
+                    ChatMenu chatMenu = new ChatMenu(currentUser, userList, this);
                     chatMenu.showChatMenu();
                     break;
                 case 2:
-                    displayStatus();
+                    System.out.println("Status");
+                    System.out.println("Coming Soon...");
+                    // Implementasi logika untuk fitur panggilan
                     break;
                 case 3:
                     System.out.println("Calls");
+                    System.out.println("Coming Soon...");
                     // Implementasi logika untuk fitur panggilan
                     break;
                 case 4:
                     System.out.println("Community");
+                    System.out.println("Coming Soon...");
                     // Implementasi logika untuk fitur komunitas
                     break;
                 case 5:
                     System.out.println("Setting");
+                    System.out.println("Coming Soon...");
                     // Implementasi logika untuk fitur pengaturan
                     break;
                 case 6:
@@ -65,7 +70,8 @@ public class MainMenu {
         Logo logo = new Logo();
         logo.logo2();
         displayStatus();
-        System.out.println("Menu: ");
+        System.out.println();
+        System.out.println("Main menu: ");
         System.out.println("1. Chat");
         System.out.println("2. Status");
         System.out.println("3. Calls");
@@ -89,10 +95,9 @@ public class MainMenu {
                 input.nextLine();
             }
         }
-
         return option;
     }
-    
+
     private void displayStatus() {
         currentUser.displayUserInfo();
     }

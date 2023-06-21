@@ -1,19 +1,34 @@
 package Interface;
+import Main.Message;
 import Main.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CurrentUser extends User {
+    private List<User> contacts;
+
     public CurrentUser(String username, String number) {
         super(username, number);
+        contacts = new ArrayList<>();
     }
 
-    // Contoh method khusus untuk CurrentUser
-    public void updateUserStatus(String status) {
-        // Implementasi logika untuk mengubah status pengguna
+    public void addContact(User user) {
+        contacts.add(user);
+    }
+
+    public List<User> getContacts() {
+        return contacts;
+    }
+
+    public Message getLastMessageWithUser(User user) {
+        // Implement logic to retrieve the last message between the current user and the specified user
         // ...
+        return null; // Replace null with the actual last message
     }
 
-    // Contoh method lain yang menggunakan atribut dan method dari kelas User
-    public void displayUserInfo() {
+    //Menampilkan Info User
+        public void displayUserInfo() {
         System.out.println("Username: " + getUsername());
         System.out.println("Number: " + getNumber());
     }
